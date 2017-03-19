@@ -36,9 +36,10 @@ namespace PizzaParty
                 if (pizzaForm.DialogResult == DialogResult.OK)
                 {
                     pizzaTag = pizzaForm.Tag.ToString();
-                    /*
+                    
                      //commented out list handling
-                    foreach (string item in pizzatag)
+                     /*
+                    foreach (string item in pizzaTag)
                     {
                         message += item;
                     }
@@ -46,7 +47,7 @@ namespace PizzaParty
 
                     //MessageBox.Show(pizzaTag);
                     //pizzaTag = pizzaForm.Tag.ToString();
-                    //addItem(pizzaTag);
+                    addItem(pizzaTag);
                 }
 
 
@@ -63,7 +64,7 @@ namespace PizzaParty
         {
             //add the item to the text box, also add a new 
             //line with an item total maybe?
-            //txtItems.Text += itemTag;
+            txtRunningTotal.Text += itemTag;
         }
 
         private void btnExit_Click(object sender, EventArgs e)

@@ -6,12 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace PizzaParty
 {
     public partial class frmPizza : Form
     {
+        string size;
+        string crust;
+        string sauce;
         public frmPizza()
         {
             InitializeComponent();
@@ -31,12 +35,34 @@ namespace PizzaParty
             initialize();
         }
 
+        private void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+            //get selection from radio buttons in form
+            if (((RadioButton)sender).Checked)
+                if (((RadioButton)sender).Name.StartsWith("rdoSize"))
+                {
+                    size = (((RadioButton)sender).Text);
+                }
+            else if (((RadioButton)sender).Name.StartsWith("rdoCrust"))
+                {
+                    crust = (((RadioButton)sender).Text);
+                }
+            else if (((RadioButton)sender).Name.StartsWith("rdoSauce"))
+                {
+                    sauce = (((RadioButton)sender).Text);
+                }
+            //Debug.Write("Size: " + size + ", Crust: " + crust + ", Sauce: " + sauce);
+        }
+
         public void initialize()
         {
+            /*
             List<string> options = new List<string>
             { "Chicken", "Hamburger", "Pepperoni", "Black Olives", "Green Olives",
                 "Spinach", "Mushrooms", "Garlic", "Anchovies", "Bell Pepper",
                 "Onions" };
+                */
             /*
             cboSize.SelectedIndex = 0;
             cboCrust.SelectedIndex = 0;

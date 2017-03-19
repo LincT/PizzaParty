@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtRuningTotal = new System.Windows.Forms.TextBox();
+            this.txtRunningTotal = new System.Windows.Forms.TextBox();
             this.btnPizza = new System.Windows.Forms.Button();
             this.btnDrinks = new System.Windows.Forms.Button();
             this.btnExtras = new System.Windows.Forms.Button();
@@ -40,21 +40,21 @@
             this.btnClearAll = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtRuningTotal
+            // txtRunningTotal
             // 
-            this.txtRuningTotal.Enabled = false;
-            this.txtRuningTotal.Location = new System.Drawing.Point(288, 32);
-            this.txtRuningTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtRuningTotal.Multiline = true;
-            this.txtRuningTotal.Name = "txtRuningTotal";
-            this.txtRuningTotal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtRuningTotal.Size = new System.Drawing.Size(222, 262);
-            this.txtRuningTotal.TabIndex = 0;
+            this.txtRunningTotal.Enabled = false;
+            this.txtRunningTotal.Location = new System.Drawing.Point(288, 32);
+            this.txtRunningTotal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRunningTotal.Multiline = true;
+            this.txtRunningTotal.Name = "txtRunningTotal";
+            this.txtRunningTotal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtRunningTotal.Size = new System.Drawing.Size(222, 262);
+            this.txtRunningTotal.TabIndex = 0;
             // 
             // btnPizza
             // 
             this.btnPizza.Location = new System.Drawing.Point(76, 32);
-            this.btnPizza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPizza.Margin = new System.Windows.Forms.Padding(2);
             this.btnPizza.Name = "btnPizza";
             this.btnPizza.Size = new System.Drawing.Size(122, 30);
             this.btnPizza.TabIndex = 0;
@@ -65,7 +65,7 @@
             // btnDrinks
             // 
             this.btnDrinks.Location = new System.Drawing.Point(76, 92);
-            this.btnDrinks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDrinks.Margin = new System.Windows.Forms.Padding(2);
             this.btnDrinks.Name = "btnDrinks";
             this.btnDrinks.Size = new System.Drawing.Size(122, 32);
             this.btnDrinks.TabIndex = 1;
@@ -75,7 +75,7 @@
             // btnExtras
             // 
             this.btnExtras.Location = new System.Drawing.Point(76, 152);
-            this.btnExtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnExtras.Name = "btnExtras";
             this.btnExtras.Size = new System.Drawing.Size(122, 30);
             this.btnExtras.TabIndex = 2;
@@ -85,7 +85,7 @@
             // btnOrder
             // 
             this.btnOrder.Location = new System.Drawing.Point(28, 249);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(98, 27);
             this.btnOrder.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(150, 250);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(98, 26);
             this.btnCancel.TabIndex = 4;
@@ -118,7 +118,7 @@
             // 
             this.txtSubtotalMain.Enabled = false;
             this.txtSubtotalMain.Location = new System.Drawing.Point(433, 316);
-            this.txtSubtotalMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubtotalMain.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubtotalMain.Name = "txtSubtotalMain";
             this.txtSubtotalMain.Size = new System.Drawing.Size(76, 20);
             this.txtSubtotalMain.TabIndex = 7;
@@ -137,7 +137,7 @@
             // btnClearAll
             // 
             this.btnClearAll.Location = new System.Drawing.Point(92, 307);
-            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(88, 34);
             this.btnClearAll.TabIndex = 5;
@@ -159,8 +159,8 @@
             this.Controls.Add(this.btnExtras);
             this.Controls.Add(this.btnDrinks);
             this.Controls.Add(this.btnPizza);
-            this.Controls.Add(this.txtRuningTotal);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.txtRunningTotal);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
             this.Text = "Pizza Party!";
             this.ResumeLayout(false);
@@ -170,7 +170,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtRuningTotal;
+        private System.Windows.Forms.TextBox txtRunningTotal;
         private System.Windows.Forms.Button btnPizza;
         private System.Windows.Forms.Button btnDrinks;
         private System.Windows.Forms.Button btnExtras;
