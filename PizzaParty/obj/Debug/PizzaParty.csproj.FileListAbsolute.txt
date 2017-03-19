@@ -1,0 +1,21 @@
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\bin\Debug\PizzaParty.exe.config
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\bin\Debug\PizzaParty.exe
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\bin\Debug\PizzaParty.pdb
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\obj\Debug\PizzaParty.csprojResolveAssemblyReference.cache
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\obj\Debug\PizzaParty.frmPizza.resources
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\obj\Debug\PizzaParty.FormMain.resources
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\obj\Debug\PizzaParty.Properties.Resources.resources
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\obj\Debug\PizzaParty.csproj.GenerateResource.Cache
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\obj\Debug\PizzaParty.exe
+c:\users\rhufus\documents\visual studio 2017\Projects\PizzaParty\PizzaParty\obj\Debug\PizzaParty.pdb
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\bin\Debug\PizzaParty.exe.config
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\obj\Debug\PizzaParty.exe
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\obj\Debug\PizzaParty.pdb
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\obj\Debug\PizzaParty.csprojResolveAssemblyReference.cache
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\obj\Debug\PizzaParty.frmDrinks.resources
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\obj\Debug\PizzaParty.frmPizza.resources
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\obj\Debug\PizzaParty.FormMain.resources
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\obj\Debug\PizzaParty.Properties.Resources.resources
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\obj\Debug\PizzaParty.csproj.GenerateResource.Cache
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\bin\Debug\PizzaParty.exe
+C:\Users\Linc\Downloads\PizzaParty (1)\PizzaParty\PizzaParty\bin\Debug\PizzaParty.pdb
