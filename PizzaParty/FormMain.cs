@@ -15,61 +15,54 @@ namespace PizzaParty
         //Eric Holmboe
         //Joseph Martin
         //Rhandee Livingston
-        /*
-         * Still need to define prices for items, done in sorted list.
-         * output from pizza form can either be returned as a list or a string
-         */
+       
         public FormMain()
         {
             InitializeComponent();
+            decimal initCost = 0.00m;
+            txtSubtotalMain.Text = (initCost).ToString("c");
         }
 
         private void btnPizza_Click(object sender, EventArgs e)
         {
             try
             {
-
                 string pizzaTag;
-
+                decimal itemprice = 0.00m;
                 Form pizzaForm = new frmPizza();
                 pizzaForm.ShowDialog();
                 if (pizzaForm.DialogResult == DialogResult.OK)
                 {
                     pizzaTag = pizzaForm.Tag.ToString();
-                    
-                     //commented out list handling
-                     /*
-                    foreach (string item in pizzaTag)
-                    {
-                        message += item;
-                    }
-                    */
-
-                    //MessageBox.Show(pizzaTag);
-                    //pizzaTag = pizzaForm.Tag.ToString();
+                    decimal.TryParse(pizzaTag.Split('$').Last(), out itemprice);
                     addItem(pizzaTag);
                 }
-
-
+                txtSubtotalMain.Text = ((Convert.ToDecimal(txtSubtotalMain.Text.Remove(0,1))) + 
+                    itemprice).ToString("c");
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
+                throw;
             }
         }
 
         public void addItem(string itemTag)
         {
-            //add the item to the text box, also add a new 
-            //line with an item total maybe?
-            txtRunningTotal.Text += itemTag;
+            txtRunningTotal.AppendText(itemTag+"\n");
+            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            txtRunningTotal.Text = "";
+            txtSubtotalMain.Text = (0.00m).ToString("c");
         }
     }
 }

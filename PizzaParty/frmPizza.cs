@@ -20,7 +20,7 @@ namespace PizzaParty
         public frmPizza()
         {
             InitializeComponent();
-
+            initialize();
         }
 
         private void FormPizza_Load(object sender, EventArgs e)
@@ -57,10 +57,11 @@ namespace PizzaParty
                 pizzaToppings.Clear();
                 foreach (Control c in this.groupBoxToppings.Controls)
                 {
-                    if (c is CheckBox && !c.Name.Contains("chkCheeseOnly"))
+                    if (c is CheckBox && !c.Name.Contains("CheeseOnly"))
                     {
                         ((CheckBox)c).Checked = false;
                     }
+
                     getToppings();
                     updateOrderView();
                     updateSubtotal();
@@ -213,7 +214,7 @@ namespace PizzaParty
             string result = "Pizza: \n";
 
             result += string.Join(", ", pizza);
-            result += "Subtotal: $" + txtSubtotal.Text;
+            result += ",Subtotal: " + txtSubtotal.Text;
             //MessageBox.Show(result);
             this.Tag = result;
             this.DialogResult = DialogResult.OK;
