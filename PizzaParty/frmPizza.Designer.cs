@@ -44,6 +44,12 @@
             this.rdoSauceAlfredo = new System.Windows.Forms.RadioButton();
             this.rdoSauceRed = new System.Windows.Forms.RadioButton();
             this.groupBoxToppings = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.chkCheeseOnly = new System.Windows.Forms.CheckBox();
             this.chkOlive = new System.Windows.Forms.CheckBox();
             this.chkBacon = new System.Windows.Forms.CheckBox();
@@ -57,13 +63,7 @@
             this.chkChix = new System.Windows.Forms.CheckBox();
             this.chkSaus = new System.Windows.Forms.CheckBox();
             this.chkPep = new System.Windows.Forms.CheckBox();
-            this.txtOrderView = new System.Windows.Forms.TextBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnAccept = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
+            this.lblOrderView = new System.Windows.Forms.Label();
             this.groupBoxSize.SuspendLayout();
             this.groupBoxCrust.SuspendLayout();
             this.groupBoxSauce.SuspendLayout();
@@ -295,186 +295,6 @@
             this.groupBoxToppings.TabStop = false;
             this.groupBoxToppings.Text = "Toppings";
             // 
-            // chkCheeseOnly
-            // 
-            this.chkCheeseOnly.AutoSize = true;
-            this.chkCheeseOnly.Location = new System.Drawing.Point(105, 187);
-            this.chkCheeseOnly.Margin = new System.Windows.Forms.Padding(2);
-            this.chkCheeseOnly.Name = "chkCheeseOnly";
-            this.chkCheeseOnly.Size = new System.Drawing.Size(84, 17);
-            this.chkCheeseOnly.TabIndex = 12;
-            this.chkCheeseOnly.TabStop = false;
-            this.chkCheeseOnly.Text = "Just Cheese";
-            this.chkCheeseOnly.UseVisualStyleBackColor = true;
-            this.chkCheeseOnly.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkOlive
-            // 
-            this.chkOlive.AutoSize = true;
-            this.chkOlive.Location = new System.Drawing.Point(185, 130);
-            this.chkOlive.Margin = new System.Windows.Forms.Padding(2);
-            this.chkOlive.Name = "chkOlive";
-            this.chkOlive.Size = new System.Drawing.Size(85, 17);
-            this.chkOlive.TabIndex = 11;
-            this.chkOlive.TabStop = false;
-            this.chkOlive.Text = "Black Olives";
-            this.chkOlive.UseVisualStyleBackColor = true;
-            this.chkOlive.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkBacon
-            // 
-            this.chkBacon.AutoSize = true;
-            this.chkBacon.Location = new System.Drawing.Point(20, 130);
-            this.chkBacon.Margin = new System.Windows.Forms.Padding(2);
-            this.chkBacon.Name = "chkBacon";
-            this.chkBacon.Size = new System.Drawing.Size(57, 17);
-            this.chkBacon.TabIndex = 10;
-            this.chkBacon.TabStop = false;
-            this.chkBacon.Text = "Bacon";
-            this.chkBacon.UseVisualStyleBackColor = true;
-            this.chkBacon.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkPineapple
-            // 
-            this.chkPineapple.AutoSize = true;
-            this.chkPineapple.Location = new System.Drawing.Point(185, 152);
-            this.chkPineapple.Margin = new System.Windows.Forms.Padding(2);
-            this.chkPineapple.Name = "chkPineapple";
-            this.chkPineapple.Size = new System.Drawing.Size(73, 17);
-            this.chkPineapple.TabIndex = 9;
-            this.chkPineapple.TabStop = false;
-            this.chkPineapple.Text = "Pineapple";
-            this.chkPineapple.UseVisualStyleBackColor = true;
-            this.chkPineapple.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkShroom
-            // 
-            this.chkShroom.AutoSize = true;
-            this.chkShroom.Location = new System.Drawing.Point(185, 108);
-            this.chkShroom.Margin = new System.Windows.Forms.Padding(2);
-            this.chkShroom.Name = "chkShroom";
-            this.chkShroom.Size = new System.Drawing.Size(75, 17);
-            this.chkShroom.TabIndex = 8;
-            this.chkShroom.TabStop = false;
-            this.chkShroom.Text = "Mushroom";
-            this.chkShroom.UseVisualStyleBackColor = true;
-            this.chkShroom.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkOnion
-            // 
-            this.chkOnion.AutoSize = true;
-            this.chkOnion.Location = new System.Drawing.Point(185, 86);
-            this.chkOnion.Margin = new System.Windows.Forms.Padding(2);
-            this.chkOnion.Name = "chkOnion";
-            this.chkOnion.Size = new System.Drawing.Size(54, 17);
-            this.chkOnion.TabIndex = 7;
-            this.chkOnion.TabStop = false;
-            this.chkOnion.Text = "Onion";
-            this.chkOnion.UseVisualStyleBackColor = true;
-            this.chkOnion.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkPeppers
-            // 
-            this.chkPeppers.AutoSize = true;
-            this.chkPeppers.Location = new System.Drawing.Point(185, 64);
-            this.chkPeppers.Margin = new System.Windows.Forms.Padding(2);
-            this.chkPeppers.Name = "chkPeppers";
-            this.chkPeppers.Size = new System.Drawing.Size(65, 17);
-            this.chkPeppers.TabIndex = 6;
-            this.chkPeppers.TabStop = false;
-            this.chkPeppers.Text = "Peppers";
-            this.chkPeppers.UseVisualStyleBackColor = true;
-            this.chkPeppers.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkSpin
-            // 
-            this.chkSpin.AutoSize = true;
-            this.chkSpin.Location = new System.Drawing.Point(185, 42);
-            this.chkSpin.Margin = new System.Windows.Forms.Padding(2);
-            this.chkSpin.Name = "chkSpin";
-            this.chkSpin.Size = new System.Drawing.Size(65, 17);
-            this.chkSpin.TabIndex = 5;
-            this.chkSpin.TabStop = false;
-            this.chkSpin.Text = "Spinach";
-            this.chkSpin.UseVisualStyleBackColor = true;
-            this.chkSpin.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkHam
-            // 
-            this.chkHam.AutoSize = true;
-            this.chkHam.Location = new System.Drawing.Point(20, 152);
-            this.chkHam.Margin = new System.Windows.Forms.Padding(2);
-            this.chkHam.Name = "chkHam";
-            this.chkHam.Size = new System.Drawing.Size(48, 17);
-            this.chkHam.TabIndex = 4;
-            this.chkHam.TabStop = false;
-            this.chkHam.Text = "Ham";
-            this.chkHam.UseVisualStyleBackColor = true;
-            this.chkHam.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkBurger
-            // 
-            this.chkBurger.AutoSize = true;
-            this.chkBurger.Location = new System.Drawing.Point(20, 108);
-            this.chkBurger.Margin = new System.Windows.Forms.Padding(2);
-            this.chkBurger.Name = "chkBurger";
-            this.chkBurger.Size = new System.Drawing.Size(78, 17);
-            this.chkBurger.TabIndex = 3;
-            this.chkBurger.TabStop = false;
-            this.chkBurger.Text = "Hamburger";
-            this.chkBurger.UseVisualStyleBackColor = true;
-            this.chkBurger.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkChix
-            // 
-            this.chkChix.AutoSize = true;
-            this.chkChix.Location = new System.Drawing.Point(20, 86);
-            this.chkChix.Margin = new System.Windows.Forms.Padding(2);
-            this.chkChix.Name = "chkChix";
-            this.chkChix.Size = new System.Drawing.Size(65, 17);
-            this.chkChix.TabIndex = 2;
-            this.chkChix.TabStop = false;
-            this.chkChix.Text = "Chicken";
-            this.chkChix.UseVisualStyleBackColor = true;
-            this.chkChix.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkSaus
-            // 
-            this.chkSaus.AutoSize = true;
-            this.chkSaus.Location = new System.Drawing.Point(20, 64);
-            this.chkSaus.Margin = new System.Windows.Forms.Padding(2);
-            this.chkSaus.Name = "chkSaus";
-            this.chkSaus.Size = new System.Drawing.Size(68, 17);
-            this.chkSaus.TabIndex = 1;
-            this.chkSaus.TabStop = false;
-            this.chkSaus.Text = "Sausage";
-            this.chkSaus.UseVisualStyleBackColor = true;
-            this.chkSaus.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // chkPep
-            // 
-            this.chkPep.AutoSize = true;
-            this.chkPep.Location = new System.Drawing.Point(20, 42);
-            this.chkPep.Margin = new System.Windows.Forms.Padding(2);
-            this.chkPep.Name = "chkPep";
-            this.chkPep.Size = new System.Drawing.Size(74, 17);
-            this.chkPep.TabIndex = 0;
-            this.chkPep.TabStop = false;
-            this.chkPep.Text = "Pepperoni";
-            this.chkPep.UseVisualStyleBackColor = true;
-            this.chkPep.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
-            // 
-            // txtOrderView
-            // 
-            this.txtOrderView.Enabled = false;
-            this.txtOrderView.Location = new System.Drawing.Point(404, 54);
-            this.txtOrderView.Margin = new System.Windows.Forms.Padding(2);
-            this.txtOrderView.Multiline = true;
-            this.txtOrderView.Name = "txtOrderView";
-            this.txtOrderView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtOrderView.Size = new System.Drawing.Size(254, 319);
-            this.txtOrderView.TabIndex = 4;
-            // 
             // btnClear
             // 
             this.btnClear.Location = new System.Drawing.Point(36, 408);
@@ -536,18 +356,195 @@
             this.txtSubtotal.Size = new System.Drawing.Size(102, 20);
             this.txtSubtotal.TabIndex = 99;
             // 
+            // chkCheeseOnly
+            // 
+            this.chkCheeseOnly.AutoSize = true;
+            this.chkCheeseOnly.Location = new System.Drawing.Point(141, 173);
+            this.chkCheeseOnly.Margin = new System.Windows.Forms.Padding(2);
+            this.chkCheeseOnly.Name = "chkCheeseOnly";
+            this.chkCheeseOnly.Size = new System.Drawing.Size(84, 17);
+            this.chkCheeseOnly.TabIndex = 25;
+            this.chkCheeseOnly.TabStop = false;
+            this.chkCheeseOnly.Text = "Just Cheese";
+            this.chkCheeseOnly.UseVisualStyleBackColor = true;
+            this.chkCheeseOnly.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkOlive
+            // 
+            this.chkOlive.AutoSize = true;
+            this.chkOlive.Location = new System.Drawing.Point(221, 116);
+            this.chkOlive.Margin = new System.Windows.Forms.Padding(2);
+            this.chkOlive.Name = "chkOlive";
+            this.chkOlive.Size = new System.Drawing.Size(85, 17);
+            this.chkOlive.TabIndex = 24;
+            this.chkOlive.TabStop = false;
+            this.chkOlive.Text = "Black Olives";
+            this.chkOlive.UseVisualStyleBackColor = true;
+            this.chkOlive.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkBacon
+            // 
+            this.chkBacon.AutoSize = true;
+            this.chkBacon.Location = new System.Drawing.Point(56, 116);
+            this.chkBacon.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBacon.Name = "chkBacon";
+            this.chkBacon.Size = new System.Drawing.Size(57, 17);
+            this.chkBacon.TabIndex = 23;
+            this.chkBacon.TabStop = false;
+            this.chkBacon.Text = "Bacon";
+            this.chkBacon.UseVisualStyleBackColor = true;
+            this.chkBacon.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkPineapple
+            // 
+            this.chkPineapple.AutoSize = true;
+            this.chkPineapple.Location = new System.Drawing.Point(221, 138);
+            this.chkPineapple.Margin = new System.Windows.Forms.Padding(2);
+            this.chkPineapple.Name = "chkPineapple";
+            this.chkPineapple.Size = new System.Drawing.Size(73, 17);
+            this.chkPineapple.TabIndex = 22;
+            this.chkPineapple.TabStop = false;
+            this.chkPineapple.Text = "Pineapple";
+            this.chkPineapple.UseVisualStyleBackColor = true;
+            this.chkPineapple.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkShroom
+            // 
+            this.chkShroom.AutoSize = true;
+            this.chkShroom.Location = new System.Drawing.Point(221, 94);
+            this.chkShroom.Margin = new System.Windows.Forms.Padding(2);
+            this.chkShroom.Name = "chkShroom";
+            this.chkShroom.Size = new System.Drawing.Size(75, 17);
+            this.chkShroom.TabIndex = 21;
+            this.chkShroom.TabStop = false;
+            this.chkShroom.Text = "Mushroom";
+            this.chkShroom.UseVisualStyleBackColor = true;
+            this.chkShroom.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkOnion
+            // 
+            this.chkOnion.AutoSize = true;
+            this.chkOnion.Location = new System.Drawing.Point(221, 72);
+            this.chkOnion.Margin = new System.Windows.Forms.Padding(2);
+            this.chkOnion.Name = "chkOnion";
+            this.chkOnion.Size = new System.Drawing.Size(54, 17);
+            this.chkOnion.TabIndex = 20;
+            this.chkOnion.TabStop = false;
+            this.chkOnion.Text = "Onion";
+            this.chkOnion.UseVisualStyleBackColor = true;
+            this.chkOnion.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkPeppers
+            // 
+            this.chkPeppers.AutoSize = true;
+            this.chkPeppers.Location = new System.Drawing.Point(221, 50);
+            this.chkPeppers.Margin = new System.Windows.Forms.Padding(2);
+            this.chkPeppers.Name = "chkPeppers";
+            this.chkPeppers.Size = new System.Drawing.Size(65, 17);
+            this.chkPeppers.TabIndex = 19;
+            this.chkPeppers.TabStop = false;
+            this.chkPeppers.Text = "Peppers";
+            this.chkPeppers.UseVisualStyleBackColor = true;
+            this.chkPeppers.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkSpin
+            // 
+            this.chkSpin.AutoSize = true;
+            this.chkSpin.Location = new System.Drawing.Point(221, 28);
+            this.chkSpin.Margin = new System.Windows.Forms.Padding(2);
+            this.chkSpin.Name = "chkSpin";
+            this.chkSpin.Size = new System.Drawing.Size(65, 17);
+            this.chkSpin.TabIndex = 18;
+            this.chkSpin.TabStop = false;
+            this.chkSpin.Text = "Spinach";
+            this.chkSpin.UseVisualStyleBackColor = true;
+            this.chkSpin.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkHam
+            // 
+            this.chkHam.AutoSize = true;
+            this.chkHam.Location = new System.Drawing.Point(56, 138);
+            this.chkHam.Margin = new System.Windows.Forms.Padding(2);
+            this.chkHam.Name = "chkHam";
+            this.chkHam.Size = new System.Drawing.Size(48, 17);
+            this.chkHam.TabIndex = 17;
+            this.chkHam.TabStop = false;
+            this.chkHam.Text = "Ham";
+            this.chkHam.UseVisualStyleBackColor = true;
+            this.chkHam.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkBurger
+            // 
+            this.chkBurger.AutoSize = true;
+            this.chkBurger.Location = new System.Drawing.Point(56, 94);
+            this.chkBurger.Margin = new System.Windows.Forms.Padding(2);
+            this.chkBurger.Name = "chkBurger";
+            this.chkBurger.Size = new System.Drawing.Size(78, 17);
+            this.chkBurger.TabIndex = 16;
+            this.chkBurger.TabStop = false;
+            this.chkBurger.Text = "Hamburger";
+            this.chkBurger.UseVisualStyleBackColor = true;
+            this.chkBurger.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkChix
+            // 
+            this.chkChix.AutoSize = true;
+            this.chkChix.Location = new System.Drawing.Point(56, 72);
+            this.chkChix.Margin = new System.Windows.Forms.Padding(2);
+            this.chkChix.Name = "chkChix";
+            this.chkChix.Size = new System.Drawing.Size(65, 17);
+            this.chkChix.TabIndex = 15;
+            this.chkChix.TabStop = false;
+            this.chkChix.Text = "Chicken";
+            this.chkChix.UseVisualStyleBackColor = true;
+            this.chkChix.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkSaus
+            // 
+            this.chkSaus.AutoSize = true;
+            this.chkSaus.Location = new System.Drawing.Point(56, 50);
+            this.chkSaus.Margin = new System.Windows.Forms.Padding(2);
+            this.chkSaus.Name = "chkSaus";
+            this.chkSaus.Size = new System.Drawing.Size(68, 17);
+            this.chkSaus.TabIndex = 14;
+            this.chkSaus.TabStop = false;
+            this.chkSaus.Text = "Sausage";
+            this.chkSaus.UseVisualStyleBackColor = true;
+            this.chkSaus.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // chkPep
+            // 
+            this.chkPep.AutoSize = true;
+            this.chkPep.Location = new System.Drawing.Point(56, 28);
+            this.chkPep.Margin = new System.Windows.Forms.Padding(2);
+            this.chkPep.Name = "chkPep";
+            this.chkPep.Size = new System.Drawing.Size(74, 17);
+            this.chkPep.TabIndex = 13;
+            this.chkPep.TabStop = false;
+            this.chkPep.Text = "Pepperoni";
+            this.chkPep.UseVisualStyleBackColor = true;
+            this.chkPep.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // lblOrderView
+            // 
+            this.lblOrderView.BackColor = System.Drawing.Color.White;
+            this.lblOrderView.Location = new System.Drawing.Point(402, 54);
+            this.lblOrderView.Name = "lblOrderView";
+            this.lblOrderView.Size = new System.Drawing.Size(280, 334);
+            this.lblOrderView.TabIndex = 100;
+            // 
             // frmPizza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 448);
+            this.Controls.Add(this.lblOrderView);
             this.Controls.Add(this.txtSubtotal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.txtOrderView);
             this.Controls.Add(this.groupBoxToppings);
             this.Controls.Add(this.groupBoxSauce);
             this.Controls.Add(this.groupBoxCrust);
@@ -586,6 +583,12 @@
         private System.Windows.Forms.RadioButton rdoSauceAlfredo;
         private System.Windows.Forms.RadioButton rdoSauceRed;
         private System.Windows.Forms.GroupBox groupBoxToppings;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnAccept;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.CheckBox chkCheeseOnly;
         private System.Windows.Forms.CheckBox chkOlive;
         private System.Windows.Forms.CheckBox chkBacon;
@@ -599,12 +602,6 @@
         private System.Windows.Forms.CheckBox chkChix;
         private System.Windows.Forms.CheckBox chkSaus;
         private System.Windows.Forms.CheckBox chkPep;
-        private System.Windows.Forms.TextBox txtOrderView;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnAccept;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSubtotal;
+        private System.Windows.Forms.Label lblOrderView;
     }
 }
