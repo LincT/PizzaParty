@@ -44,12 +44,6 @@
             this.rdoSauceAlfredo = new System.Windows.Forms.RadioButton();
             this.rdoSauceRed = new System.Windows.Forms.RadioButton();
             this.groupBoxToppings = new System.Windows.Forms.GroupBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnAccept = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.chkCheeseOnly = new System.Windows.Forms.CheckBox();
             this.chkOlive = new System.Windows.Forms.CheckBox();
             this.chkBacon = new System.Windows.Forms.CheckBox();
@@ -63,6 +57,12 @@
             this.chkChix = new System.Windows.Forms.CheckBox();
             this.chkSaus = new System.Windows.Forms.CheckBox();
             this.chkPep = new System.Windows.Forms.CheckBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnAccept = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.lblOrderView = new System.Windows.Forms.Label();
             this.groupBoxSize.SuspendLayout();
             this.groupBoxCrust.SuspendLayout();
@@ -295,67 +295,6 @@
             this.groupBoxToppings.TabStop = false;
             this.groupBoxToppings.Text = "Toppings";
             // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(36, 408);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(92, 24);
-            this.btnClear.TabIndex = 5;
-            this.btnClear.Text = "Clear Options";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnAccept
-            // 
-            this.btnAccept.Location = new System.Drawing.Point(158, 408);
-            this.btnAccept.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(92, 24);
-            this.btnAccept.TabIndex = 6;
-            this.btnAccept.Text = "Accept";
-            this.btnAccept.UseVisualStyleBackColor = true;
-            this.btnAccept.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(278, 408);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(92, 24);
-            this.btnCancel.TabIndex = 7;
-            this.btnCancel.Text = "Back";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(402, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Order:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(481, 403);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 99;
-            this.label2.Text = "Subtotal:";
-            // 
-            // txtSubtotal
-            // 
-            this.txtSubtotal.Location = new System.Drawing.Point(550, 401);
-            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(102, 20);
-            this.txtSubtotal.TabIndex = 99;
-            // 
             // chkCheeseOnly
             // 
             this.chkCheeseOnly.AutoSize = true;
@@ -524,6 +463,67 @@
             this.chkPep.Text = "Pepperoni";
             this.chkPep.UseVisualStyleBackColor = true;
             this.chkPep.CheckedChanged += new System.EventHandler(this.chk_CheckChanged);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(36, 408);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(92, 24);
+            this.btnClear.TabIndex = 5;
+            this.btnClear.Text = "Clear Options";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnAccept
+            // 
+            this.btnAccept.Location = new System.Drawing.Point(158, 408);
+            this.btnAccept.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(92, 24);
+            this.btnAccept.TabIndex = 6;
+            this.btnAccept.Text = "Accept";
+            this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(278, 408);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(92, 24);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Back";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(402, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Order:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(481, 403);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 99;
+            this.label2.Text = "Subtotal:";
+            // 
+            // txtSubtotal
+            // 
+            this.txtSubtotal.Location = new System.Drawing.Point(550, 401);
+            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSubtotal.Name = "txtSubtotal";
+            this.txtSubtotal.Size = new System.Drawing.Size(102, 20);
+            this.txtSubtotal.TabIndex = 99;
             // 
             // lblOrderView
             // 

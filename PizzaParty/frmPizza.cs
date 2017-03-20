@@ -20,6 +20,7 @@ namespace PizzaParty
         public frmPizza()
         {
             InitializeComponent();
+
         }
 
         private void FormPizza_Load(object sender, EventArgs e)
@@ -46,12 +47,33 @@ namespace PizzaParty
                 }
             getToppings();
             updateOrderView();
+            updateSubtotal();
         }
 
         private void chk_CheckChanged(object sender, EventArgs e)
         {
-            getToppings();
-            updateOrderView();
+            if (chkCheeseOnly.Checked)
+            {
+                pizzaToppings.Clear();
+                foreach (Control c in this.groupBoxToppings.Controls)
+                {
+                    if (c is CheckBox && !c.Name.Contains("chkCheeseOnly"))
+                    {
+                        ((CheckBox)c).Checked = false;
+                    }
+                    getToppings();
+                    updateOrderView();
+                    updateSubtotal();
+                }
+
+            }
+            else
+            {
+                getToppings();
+                updateOrderView();
+                updateSubtotal();
+            }
+            
         }
 
         private void getToppings()
@@ -98,6 +120,60 @@ namespace PizzaParty
                 throw;
             }
         }
+
+        private void updateSubtotal()
+        {
+            decimal price = 0.00m;
+            decimal sizePrice = 0.00m;
+            decimal crustPrice = 0.00m;
+            decimal toppingPrice = 0.00m;
+            if (size != null)
+            {
+                if(size.Split('$')[1] != null)
+                {
+                    sizePrice = Convert.ToDecimal(size.Split('$')[1]);
+                    //if tryparse returns false. put in default amount
+                    //sizePrice = 0.00m;
+                }
+                else
+                {
+                    sizePrice = 0.00m;
+                }
+
+               
+
+            }
+            
+            price += sizePrice;
+
+            if (crust != null)
+            {
+                if (crust.Contains("$"))
+                {
+                    Decimal.TryParse((crust.Split('$')[1]).Replace(")", ""), out crustPrice);
+                }
+            }
+            else
+            {
+                crustPrice = 0.00m;
+            }
+            price += crustPrice;
+
+            if(pizzaToppings.Contains("Just Cheese"))
+            {
+                toppingPrice += 0.25m;
+            }
+            else
+            {
+                foreach (string topping in pizzaToppings)
+                {
+                    toppingPrice += 0.25m;
+                }
+            }
+            
+            price += toppingPrice;
+            txtSubtotal.Text = price.ToString("c");
+        }
         public void initialize()
         {
             foreach(Control c in this.groupBoxToppings.Controls)
@@ -126,21 +202,22 @@ namespace PizzaParty
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            /*
-            pizza.Add(cboSize.Text);
-            pizza.Add(cboSauce.Text);
-            pizza.Add(cboCrust.Text);
-            foreach (object itemChecked in clbToppings.CheckedItems)
+            List<string> pizza = new List<string>();
+            pizza.Add(size);
+            pizza.Add(sauce);
+            pizza.Add(crust);
+            foreach (string topping in pizzaToppings)
             {
-                pizza.Add(itemChecked.ToString());
+                pizza.Add(topping);
             }
             string result = "Pizza: \n";
 
             result += string.Join(", ", pizza);
+            result += "Subtotal: $" + txtSubtotal.Text;
             //MessageBox.Show(result);
             this.Tag = result;
             this.DialogResult = DialogResult.OK;
-            */
+            
         }
     }
 }
