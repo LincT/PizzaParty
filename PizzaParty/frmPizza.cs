@@ -16,20 +16,11 @@ namespace PizzaParty
         string size;
         string crust;
         string sauce;
-        List<string> toppings = new List<string>{""};
+        List<string> toppings = new List<string>();
         public frmPizza()
         {
             InitializeComponent();
         }
-
-        //global variable to pass to other forms
-        List<string> pizza = new List<string> { };
-
-        public List<string> addPizza
-        {
-            get { return pizza; }
-        }
-        
 
         private void FormPizza_Load(object sender, EventArgs e)
         {
@@ -38,8 +29,8 @@ namespace PizzaParty
 
         private void radioButton_CheckedChanged(object sender, EventArgs e)
         {
-
             //get selection from radio buttons in form
+            //apply to appropriate variable
             if (((RadioButton)sender).Checked)
                 if (((RadioButton)sender).Name.StartsWith("rdoSize"))
                 {
@@ -69,9 +60,13 @@ namespace PizzaParty
             //List<string> toppings = new List<string> { };
             foreach (Control c in Controls)
             {
-                if (c is CheckBox)
+                Debug.Write(c.Name);
+                
+                if (c.Name.StartsWith("chk") == true)
                 {
-                    if (((CheckBox)c).Checked)
+                    Debug.Write("CheckBox Found!");
+                    Debug.Write((c).Name + "|");
+                    if (c is CheckBox&&((CheckBox)c).Checked)
                     {
                         toppings.Add(((CheckBox)c).Text);
                         Debug.Write(((CheckBox)c).Name);
@@ -91,9 +86,9 @@ namespace PizzaParty
                 result += "Size: " + size + "\n";
                 result += "Crust: " + crust + "\n";
                 result += "Sauce: " + sauce + "\n";
-                if (toppings.Count > 0)
+                if (toppings.Count >=1)
                 {
-                    Debug.Write("Toppings Count: " + toppings.Count);
+                   MessageBox.Show("Toppings Count: " + toppings.Count);
                     result += "Toppings:\n";
                     foreach (string topping in toppings)
                     {
@@ -107,7 +102,7 @@ namespace PizzaParty
             }
             catch (ArgumentNullException)
             {
-                
+                throw;
             }
             catch(Exception ex)
             {
@@ -117,35 +112,7 @@ namespace PizzaParty
         }
         public void initialize()
         {
-            /*
-            List<string> options = new List<string>
-            { "Chicken", "Hamburger", "Pepperoni", "Black Olives", "Green Olives",
-                "Spinach", "Mushrooms", "Garlic", "Anchovies", "Bell Pepper",
-                "Onions" };
-                */
-           
-            /*
-            cboSize.SelectedIndex = 0;
-            cboCrust.SelectedIndex = 0;
-            cboSauce.SelectedIndex = 0;
-            clbToppings.ClearSelected();
-            clbToppings.Items.Clear();
-            foreach (string newItem in options)
-            {
-                clbToppings.Items.Add(newItem);
-            }
-            
-
-            foreach (int i in clbToppings.CheckedIndices)
-            {
-                clbToppings.SetItemCheckState(i, CheckState.Unchecked);
-            }
-            */
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            foreach (Control c in Controls)
+            foreach(Control c in Controls)
             {
                 if (c is CheckBox)
                 {
@@ -154,10 +121,9 @@ namespace PizzaParty
             }
         }
 
-        private void clbToppings_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            //int toppingCount = clbToppings.CheckedIndices.Count;
-
+            initialize();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
