@@ -50,6 +50,7 @@
             this.txtRunningTotal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtRunningTotal.Size = new System.Drawing.Size(222, 262);
             this.txtRunningTotal.TabIndex = 0;
+            this.txtRunningTotal.TextChanged += new System.EventHandler(this.txtRunningTotal_TextChanged);
             // 
             // btnPizza
             // 
@@ -71,6 +72,7 @@
             this.btnDrinks.TabIndex = 1;
             this.btnDrinks.Text = "Drinks";
             this.btnDrinks.UseVisualStyleBackColor = true;
+            this.btnDrinks.Click += new System.EventHandler(this.btnDrinks_Click);
             // 
             // btnExtras
             // 
@@ -165,6 +167,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMain";
             this.Text = "Pizza Party!";
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
