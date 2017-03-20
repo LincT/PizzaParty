@@ -16,13 +16,14 @@ namespace PizzaParty
         string size;
         string crust;
         string sauce;
+        List<string> toppings = new List<string>{""};
         public frmPizza()
         {
             InitializeComponent();
         }
 
         //global variable to pass to other forms
-        List<string> pizza = new List<string>();
+        List<string> pizza = new List<string> { };
 
         public List<string> addPizza
         {
@@ -52,9 +53,68 @@ namespace PizzaParty
                 {
                     sauce = (((RadioButton)sender).Text);
                 }
+            updateOrderView();
             //Debug.Write("Size: " + size + ", Crust: " + crust + ", Sauce: " + sauce);
         }
 
+        private void chk_CheckChanged(object sender, EventArgs e)
+        {
+            
+            getToppings();
+            updateOrderView();
+        }
+
+        private void getToppings()
+        {
+            //List<string> toppings = new List<string> { };
+            foreach (Control c in Controls)
+            {
+                if (c is CheckBox)
+                {
+                    if (((CheckBox)c).Checked)
+                    {
+                        toppings.Add(((CheckBox)c).Text);
+                        Debug.Write(((CheckBox)c).Name);
+                    }
+                    
+                }
+                return;
+            }
+        }
+
+        public void updateOrderView()
+        {
+            try
+            {
+                string result = "";
+                result += "Current Order:\n";
+                result += "Size: " + size + "\n";
+                result += "Crust: " + crust + "\n";
+                result += "Sauce: " + sauce + "\n";
+                if (toppings.Count > 0)
+                {
+                    Debug.Write("Toppings Count: " + toppings.Count);
+                    result += "Toppings:\n";
+                    foreach (string topping in toppings)
+                    {
+                        result += "\t" + topping;
+                    }
+
+                }
+
+                txtOrderView.Text = result;
+
+            }
+            catch (ArgumentNullException)
+            {
+                
+            }
+            catch(Exception ex)
+            {
+                Debug.Write(ex.Message);
+                throw;
+            }
+        }
         public void initialize()
         {
             /*
@@ -63,6 +123,7 @@ namespace PizzaParty
                 "Spinach", "Mushrooms", "Garlic", "Anchovies", "Bell Pepper",
                 "Onions" };
                 */
+           
             /*
             cboSize.SelectedIndex = 0;
             cboCrust.SelectedIndex = 0;
@@ -84,7 +145,13 @@ namespace PizzaParty
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            initialize();
+            foreach (Control c in Controls)
+            {
+                if (c is CheckBox)
+                {
+                    ((CheckBox)c).Checked = false;
+                }
+            }
         }
 
         private void clbToppings_SelectedIndexChanged(object sender, EventArgs e)
