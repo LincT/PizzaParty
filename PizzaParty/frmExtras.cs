@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace PizzaParty
 {
-    public partial class frmDrinks : Form
+    public partial class frmExtras : Form
     {
-        public frmDrinks()
+        public frmExtras()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cboSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
