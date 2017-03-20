@@ -213,11 +213,14 @@ namespace PizzaParty
             string result = "Pizza: \n";
 
             result += string.Join(", ", pizza);
-            result += "Subtotal: $" + txtSubtotal.Text;
+            result += "Subtotal: " + txtSubtotal.Text;
+
+
             //MessageBox.Show(result);
             this.Tag = result;
             this.DialogResult = DialogResult.OK;
-            
+
+
         }
     }
 }

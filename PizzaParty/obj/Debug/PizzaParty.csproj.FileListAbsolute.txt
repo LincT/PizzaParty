@@ -41,3 +41,4 @@ C:\Users\Rhufus\Documents\GitHub\PizzaParty\PizzaParty\obj\Debug\PizzaParty.Prop
 C:\Users\Rhufus\Documents\GitHub\PizzaParty\PizzaParty\obj\Debug\PizzaParty.csproj.GenerateResource.Cache
 C:\Users\Rhufus\Documents\GitHub\PizzaParty\PizzaParty\obj\Debug\PizzaParty.exe
 C:\Users\Rhufus\Documents\GitHub\PizzaParty\PizzaParty\obj\Debug\PizzaParty.pdb
+C:\Users\Rhufus\Documents\GitHub\PizzaParty\PizzaParty\obj\Debug\PizzaParty.frmExtras.resources

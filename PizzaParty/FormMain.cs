@@ -71,5 +71,29 @@ namespace PizzaParty
         {
             this.Close();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRunningTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            //Clear text boxes 
+            txtRunningTotal.Text = String.Empty;
+            txtSubtotalMain.Text = String.Empty;
+        }
+
+        private void btnDrinks_Click(object sender, EventArgs e)
+        {
+            //bring up drink form
+            Form drinkForm = new frmDrinks();
+            drinkForm.ShowDialog();
+        }
     }
 }
