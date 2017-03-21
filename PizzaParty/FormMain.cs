@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace PizzaParty
 {
@@ -15,7 +16,6 @@ namespace PizzaParty
         //Eric Holmboe
         //Joseph Martin
         //Rhandee Livingston
-       //test
         public FormMain()
         {
             InitializeComponent();
@@ -23,20 +23,47 @@ namespace PizzaParty
             txtSubtotalMain.Text = (initCost).ToString("c");
         }
 
-        private void btnPizza_Click(object sender, EventArgs e)
+        private void btnAddItem_Click(object sender, EventArgs e)
         {
             try
             {
-                string pizzaTag;
+                string formTag;
                 decimal itemprice = 0.00m;
-                Form pizzaForm = new frmPizza();
-                pizzaForm.ShowDialog();
-                if (pizzaForm.DialogResult == DialogResult.OK)
+                if (((Button)sender).Name.Contains("Pizza"))
                 {
-                    pizzaTag = pizzaForm.Tag.ToString();
-                    decimal.TryParse(pizzaTag.Split('$').Last(), out itemprice);
-                    addItem(pizzaTag);
+                    Form pizzaForm = new frmPizza();
+                    pizzaForm.ShowDialog();
+                    if (pizzaForm.DialogResult == DialogResult.OK)
+                    {
+                        formTag = pizzaForm.Tag.ToString();
+                        decimal.TryParse(formTag.Split('$').Last(), out itemprice);
+                        addItem(formTag);
+                    }
                 }
+                else if(((Button)sender).Name.Contains("Drinks"))
+                {
+                    Form Form = new frmDrinks();
+                    Form.ShowDialog();
+                    if (Form.DialogResult == DialogResult.OK)
+                    {
+                        formTag = Form.Tag.ToString();
+                        decimal.TryParse(formTag.Split('$').Last(), out itemprice);
+                        addItem(formTag);
+                    }
+                }
+                else if (((Button)sender).Name.Contains("Extras"))
+                {
+                    Form Form = new frmExtras();
+                    Form.ShowDialog();
+                    if (Form.DialogResult == DialogResult.OK)
+                    {
+                        formTag = Form.Tag.ToString();
+                        decimal.TryParse(formTag.Split('$').Last(), out itemprice);
+                        addItem(formTag);
+                    }
+                }
+
+
                 txtSubtotalMain.Text = ((Convert.ToDecimal(txtSubtotalMain.Text.Remove(0,1))) + 
                     itemprice).ToString("c");
             }
@@ -63,6 +90,32 @@ namespace PizzaParty
         {
             txtRunningTotal.Text = "";
             txtSubtotalMain.Text = (0.00m).ToString("c");
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            bool checkorder = (txtRunningTotal.Text != "");
+
+            if (txtRunningTotal.Text != "") {
+                if (MessageBox.Show("Do you wish to submit this order?",
+                       "Confirm Order",
+                       MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                   
+                    MessageBox.Show("Thanks for your order!", "Order Submitted");
+                    Debug.Write("Order Desc: \n" + txtRunningTotal +
+                        "\nTotal:\n" + txtSubtotalMain);
+                    txtRunningTotal.Text = "";
+                    txtSubtotalMain.Text = (0.00m).ToString("c");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Data to Submit", "Error",
+                           MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
         }
     }
 }

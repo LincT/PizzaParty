@@ -44,61 +44,62 @@
             // 
             this.txtRunningTotal.Enabled = false;
             this.txtRunningTotal.Location = new System.Drawing.Point(288, 32);
-            this.txtRunningTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRunningTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtRunningTotal.Multiline = true;
             this.txtRunningTotal.Name = "txtRunningTotal";
             this.txtRunningTotal.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtRunningTotal.Size = new System.Drawing.Size(222, 262);
             this.txtRunningTotal.TabIndex = 0;
-            this.txtRunningTotal.TextChanged += new System.EventHandler(this.txtRunningTotal_TextChanged);
             // 
             // btnPizza
             // 
             this.btnPizza.Location = new System.Drawing.Point(76, 32);
-            this.btnPizza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPizza.Margin = new System.Windows.Forms.Padding(2);
             this.btnPizza.Name = "btnPizza";
             this.btnPizza.Size = new System.Drawing.Size(122, 30);
             this.btnPizza.TabIndex = 0;
             this.btnPizza.Text = "Pizza Selector";
             this.btnPizza.UseVisualStyleBackColor = true;
-            this.btnPizza.Click += new System.EventHandler(this.btnPizza_Click);
+            this.btnPizza.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // btnDrinks
             // 
             this.btnDrinks.Location = new System.Drawing.Point(76, 92);
-            this.btnDrinks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDrinks.Margin = new System.Windows.Forms.Padding(2);
             this.btnDrinks.Name = "btnDrinks";
             this.btnDrinks.Size = new System.Drawing.Size(122, 32);
             this.btnDrinks.TabIndex = 1;
             this.btnDrinks.Text = "Drinks";
             this.btnDrinks.UseVisualStyleBackColor = true;
-            this.btnDrinks.Click += new System.EventHandler(this.btnDrinks_Click);
+            this.btnDrinks.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // btnExtras
             // 
             this.btnExtras.Location = new System.Drawing.Point(76, 152);
-            this.btnExtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnExtras.Name = "btnExtras";
             this.btnExtras.Size = new System.Drawing.Size(122, 30);
             this.btnExtras.TabIndex = 2;
             this.btnExtras.Text = "Extras";
             this.btnExtras.UseVisualStyleBackColor = true;
+            this.btnExtras.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // btnOrder
             // 
             this.btnOrder.Location = new System.Drawing.Point(28, 249);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(98, 27);
             this.btnOrder.TabIndex = 3;
             this.btnOrder.Text = "Place Order";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnCancelAll
             // 
             this.btnCancelAll.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelAll.Location = new System.Drawing.Point(150, 250);
-            this.btnCancelAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelAll.Name = "btnCancelAll";
             this.btnCancelAll.Size = new System.Drawing.Size(98, 26);
             this.btnCancelAll.TabIndex = 4;
@@ -121,7 +122,7 @@
             // 
             this.txtSubtotalMain.Enabled = false;
             this.txtSubtotalMain.Location = new System.Drawing.Point(433, 316);
-            this.txtSubtotalMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubtotalMain.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubtotalMain.Name = "txtSubtotalMain";
             this.txtSubtotalMain.Size = new System.Drawing.Size(76, 20);
             this.txtSubtotalMain.TabIndex = 7;
@@ -140,7 +141,7 @@
             // btnClearAll
             // 
             this.btnClearAll.Location = new System.Drawing.Point(92, 307);
-            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(88, 34);
             this.btnClearAll.TabIndex = 5;
@@ -164,10 +165,9 @@
             this.Controls.Add(this.btnDrinks);
             this.Controls.Add(this.btnPizza);
             this.Controls.Add(this.txtRunningTotal);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
             this.Text = "Pizza Party!";
-            this.Load += new System.EventHandler(this.FormMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
