@@ -126,6 +126,7 @@
             this.txtSubtotalMain.Name = "txtSubtotalMain";
             this.txtSubtotalMain.Size = new System.Drawing.Size(100, 22);
             this.txtSubtotalMain.TabIndex = 7;
+            this.txtSubtotalMain.TextChanged += new System.EventHandler(this.txtSubtotalMain_TextChanged);
             // 
             // lblSubtotal
             // 
