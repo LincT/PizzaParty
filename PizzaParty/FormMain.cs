@@ -47,6 +47,7 @@ namespace PizzaParty
                     if (Form.DialogResult == DialogResult.OK)
                     {
                         formTag = Form.Tag.ToString();
+                        MessageBox.Show(formTag);
                         decimal.TryParse(formTag.Split('$').Last(), out itemprice);
                         addItem(formTag);
                     }
