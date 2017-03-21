@@ -117,5 +117,15 @@ namespace PizzaParty
 
 
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRunningTotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

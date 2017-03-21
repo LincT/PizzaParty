@@ -31,5 +31,29 @@ namespace PizzaParty
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmDrinks_Load(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void btnAddDrinks_Click(object sender, EventArgs e)
+        {
+            string drinkSize = this.cboSize.GetItemText(this.cboSize.SelectedItem);
+            string drinkType = this.cboType.GetItemText(this.cboType.SelectedItem);
+            string drinkSelected = "Drink: ";
+
+            drinkSelected += string.Join(",", drinkSize, drinkType);
+
+            this.Tag = drinkSelected;
+            this.DialogResult = DialogResult.OK;
+
+        }
     }
 }
