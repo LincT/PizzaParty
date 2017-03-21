@@ -17,47 +17,53 @@ namespace PizzaParty
         public frmExtras()
         {
             InitializeComponent();
-
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void initializeControls()
         {
-
+            foreach (Control c in this.groupBoxAdd.Controls)
+            {
+                ((CheckBox)c).Checked = false;
+            }
+            txtExtraOrder.Text = ""; //clear order description
+            txtExtraSubtotal.Text = 0.00m.ToString(); //reset subtotal
         }
-
         private void frmExtras_Load(object sender, EventArgs e)
         {
-
+            initializeControls();
         }
         private void getExtras()
         {
             extras.Clear();
             foreach (Control c in this.groupBoxAdd.Controls)
             {
-                if (c is CheckBox)
+                if (c is CheckBox && ((CheckBox)c).Checked)
                 {
-                    if (((CheckBox)c).Checked)
-                    {
-                        extras.Add(((CheckBox)c).Text);
-                    }
+                    extras.Add(c.Text);
                 }
             }
         }
+        private void chk_CheckChanged(object sender,EventArgs e)
+        {
+            getExtras();
+            updateOrderView();
+            updateSubtotal();
+        }
         private void updateSubtotal()
         {
-            //trying to get the subtotal to show based on how many selections are made
+            //subtotal based on items checked.
             decimal extraPrice = 0.00m;
-            decimal extraSub = 0.00m;
-
+           
             foreach (Control c in this.groupBoxAdd.Controls)
             {
-                extraPrice += 5.00m;
+                if (c is CheckBox && ((CheckBox)c).Checked)
+                {
+                    extraPrice += 5.00m;
+                }
             }
-            extraSub += extraPrice;
-
-            txtExtraSubtotal.Text = extraSub.ToString("c");
-
+            txtExtraSubtotal.Text = extraPrice.ToString("c");
         }
+
         public void updateOrderView()
         {
             try
@@ -67,13 +73,12 @@ namespace PizzaParty
                 if (extras.Count >= 1)
                 {
                     List<string> extraDisplay = new List<string>();
-                    extraDisplay.Add(" Add-On ");
+                    txtExtraOrder.AppendText("Add-Ons: ");
                     foreach (string addOn in extras)
                     {
-                        extraDisplay.Add("\t" + extras);
+                        txtExtraOrder.AppendText("\t" + addOn + "\n");
                     }
                 }
-                txtExtraOrder.Text = string.Join("\n", extras);
             }
             catch (ArgumentNullException)
             {
@@ -88,22 +93,24 @@ namespace PizzaParty
 
         private void btnAcceptExtras_Click(object sender, EventArgs e)
         {
+            //this needs to set this.tag
+            List<string> extraTag = new List<string>();
+            foreach (string extra in extras)
+            {
+                extraTag.Add(extra);
+            }
+            string result = "Extras: \n";
 
+            result += string.Join(", ", extraTag);
+            result += ",Subtotal: " + txtExtraSubtotal.Text;
+            //MessageBox.Show(result);
+            this.Tag = result;
+            this.DialogResult = DialogResult.OK;
         }
 
         private void btnClearExtras_Click(object sender, EventArgs e)
         {
-            foreach (Control c in this.groupBoxAdd.Controls)
-            {
-                if (c.GetType() == typeof(CheckBox))
-                {
-                    ((CheckBox)c).Checked = false;
-                }
-            }
-            txtExtraOrder.Text = string.Empty;
-            txtExtraSubtotal.Text = string.Empty;
-
-
+            initializeControls();
         }
     }
 }
