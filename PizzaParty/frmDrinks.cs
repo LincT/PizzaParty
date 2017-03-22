@@ -15,33 +15,16 @@ namespace PizzaParty
         public frmDrinks()
         {
             InitializeComponent();
+            cboSize.SelectedIndex = 0;
+            cboType.SelectedIndex = 0;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cboSize_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void frmDrinks_Load(object sender, EventArgs e)
-        {
-           
-
-        }
 
         private void btnAddDrinks_Click(object sender, EventArgs e)
         {
@@ -56,11 +39,6 @@ namespace PizzaParty
             //Result to show on txtRunningTotal on Main Form
             this.Tag = drinkSelected;
             this.DialogResult = DialogResult.OK;
-
-            //if and else if statements to determine cost to be added to total
-            if (cboSize.SelectedItem.ToString() == "12 oz can - $1") {/**/ } ;
-
-
         }
     }
 }
