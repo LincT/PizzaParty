@@ -19,8 +19,7 @@ namespace PizzaParty
         public FormMain()
         {
             InitializeComponent();
-            decimal initCost = 0.00m;
-            txtSubtotalMain.Text = (initCost).ToString("c");
+            txtSubtotalMain.Text = 0.00m.ToString("c");
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -104,8 +103,8 @@ namespace PizzaParty
                 {
                    
                     MessageBox.Show("Thanks for your order!", "Order Submitted");
-                    Debug.Write("Order Desc: \n" + txtRunningTotal +
-                        "\nTotal:\n" + txtSubtotalMain);
+                    Debug.Write("Order Desc: \n" + txtRunningTotal.Text +
+                        "\nTotal:\n" + txtSubtotalMain.Text);
                     txtRunningTotal.Text = "";
                     txtSubtotalMain.Text = (0.00m).ToString("c");
                 }
@@ -115,23 +114,6 @@ namespace PizzaParty
                 MessageBox.Show("No Data to Submit", "Error",
                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
-
-        }
-
-        private void FormMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtRunningTotal_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSubtotalMain_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -50,14 +50,15 @@ namespace PizzaParty
             string drinkType = this.cboType.GetItemText(this.cboType.SelectedItem);
             string drinkSelected = "Drink: ";
 
-            drinkSelected += string.Join(",", drinkSize, drinkType);
+            drinkSelected += string.Join(",", drinkSize.Split('-')[0] +","+ drinkType+"," + 
+                drinkSize.Split('-')[1]);
 
             //Result to show on txtRunningTotal on Main Form
             this.Tag = drinkSelected;
             this.DialogResult = DialogResult.OK;
-            
+
             //if and else if statements to determine cost to be added to total
-            if (cboSize.SelectedItem.ToString() == "12 oz can - $1") ;
+            if (cboSize.SelectedItem.ToString() == "12 oz can - $1") {/**/ } ;
 
 
         }

@@ -140,9 +140,6 @@ namespace PizzaParty
                 {
                     sizePrice = 0.00m;
                 }
-
-               
-
             }
             
             price += sizePrice;
@@ -197,7 +194,6 @@ namespace PizzaParty
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            //comment
         }
 
 
@@ -215,7 +211,6 @@ namespace PizzaParty
 
             result += string.Join(", ", pizza);
             result += ",Subtotal: " + txtSubtotal.Text;
-            //MessageBox.Show(result);
             this.Tag = result;
             this.DialogResult = DialogResult.OK;
             

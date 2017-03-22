@@ -23,6 +23,7 @@ namespace PizzaParty
         {
             foreach (Control c in this.groupBoxAdd.Controls)
             {
+                //set all check boxes in group box to false
                 ((CheckBox)c).Checked = false;
             }
             txtExtraOrder.Text = ""; //clear order description
@@ -45,6 +46,7 @@ namespace PizzaParty
         }
         private void chk_CheckChanged(object sender,EventArgs e)
         {
+            //one event handler for all the check boxes.
             getExtras();
             updateOrderView();
             updateSubtotal();
