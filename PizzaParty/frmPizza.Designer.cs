@@ -529,6 +529,7 @@
             // lblOrderView
             // 
             this.lblOrderView.BackColor = System.Drawing.Color.White;
+            this.lblOrderView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblOrderView.Location = new System.Drawing.Point(402, 54);
             this.lblOrderView.Name = "lblOrderView";
             this.lblOrderView.Size = new System.Drawing.Size(280, 334);

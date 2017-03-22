@@ -46,7 +46,7 @@
             // 
             this.chkWings.AutoSize = true;
             this.chkWings.Location = new System.Drawing.Point(22, 17);
-            this.chkWings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkWings.Margin = new System.Windows.Forms.Padding(2);
             this.chkWings.Name = "chkWings";
             this.chkWings.Size = new System.Drawing.Size(92, 17);
             this.chkWings.TabIndex = 0;
@@ -58,7 +58,7 @@
             // 
             this.chkStix.AutoSize = true;
             this.chkStix.Location = new System.Drawing.Point(23, 50);
-            this.chkStix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkStix.Margin = new System.Windows.Forms.Padding(2);
             this.chkStix.Name = "chkStix";
             this.chkStix.Size = new System.Drawing.Size(86, 17);
             this.chkStix.TabIndex = 1;
@@ -70,7 +70,7 @@
             // 
             this.chkChzStix.AutoSize = true;
             this.chkChzStix.Location = new System.Drawing.Point(22, 79);
-            this.chkChzStix.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkChzStix.Margin = new System.Windows.Forms.Padding(2);
             this.chkChzStix.Name = "chkChzStix";
             this.chkChzStix.Size = new System.Drawing.Size(94, 17);
             this.chkChzStix.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.chkDessert.AutoSize = true;
             this.chkDessert.Location = new System.Drawing.Point(23, 108);
-            this.chkDessert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkDessert.Margin = new System.Windows.Forms.Padding(2);
             this.chkDessert.Name = "chkDessert";
             this.chkDessert.Size = new System.Drawing.Size(90, 17);
             this.chkDessert.TabIndex = 3;
@@ -92,20 +92,22 @@
             // 
             // txtExtraOrder
             // 
-            this.txtExtraOrder.Enabled = false;
+            this.txtExtraOrder.BackColor = System.Drawing.Color.White;
             this.txtExtraOrder.Location = new System.Drawing.Point(166, 46);
-            this.txtExtraOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExtraOrder.Margin = new System.Windows.Forms.Padding(2);
             this.txtExtraOrder.Multiline = true;
             this.txtExtraOrder.Name = "txtExtraOrder";
+            this.txtExtraOrder.ReadOnly = true;
             this.txtExtraOrder.Size = new System.Drawing.Size(132, 145);
             this.txtExtraOrder.TabIndex = 4;
             // 
             // txtExtraSubtotal
             // 
-            this.txtExtraSubtotal.Enabled = false;
+            this.txtExtraSubtotal.BackColor = System.Drawing.Color.White;
             this.txtExtraSubtotal.Location = new System.Drawing.Point(222, 206);
-            this.txtExtraSubtotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtExtraSubtotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtExtraSubtotal.Name = "txtExtraSubtotal";
+            this.txtExtraSubtotal.ReadOnly = true;
             this.txtExtraSubtotal.Size = new System.Drawing.Size(76, 20);
             this.txtExtraSubtotal.TabIndex = 5;
             // 
@@ -122,7 +124,7 @@
             // btnClearExtras
             // 
             this.btnClearExtras.Location = new System.Drawing.Point(46, 240);
-            this.btnClearExtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearExtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearExtras.Name = "btnClearExtras";
             this.btnClearExtras.Size = new System.Drawing.Size(56, 19);
             this.btnClearExtras.TabIndex = 8;
@@ -133,7 +135,7 @@
             // btnAcceptExtras
             // 
             this.btnAcceptExtras.Location = new System.Drawing.Point(140, 240);
-            this.btnAcceptExtras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAcceptExtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAcceptExtras.Name = "btnAcceptExtras";
             this.btnAcceptExtras.Size = new System.Drawing.Size(56, 19);
             this.btnAcceptExtras.TabIndex = 9;
@@ -144,7 +146,7 @@
             // btnExtrasBack
             // 
             this.btnExtrasBack.Location = new System.Drawing.Point(231, 240);
-            this.btnExtrasBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExtrasBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnExtrasBack.Name = "btnExtrasBack";
             this.btnExtrasBack.Size = new System.Drawing.Size(56, 19);
             this.btnExtrasBack.TabIndex = 10;
@@ -159,9 +161,9 @@
             this.groupBoxAdd.Controls.Add(this.chkStix);
             this.groupBoxAdd.Controls.Add(this.chkWings);
             this.groupBoxAdd.Location = new System.Drawing.Point(35, 48);
-            this.groupBoxAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdd.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxAdd.Name = "groupBoxAdd";
-            this.groupBoxAdd.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdd.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxAdd.Size = new System.Drawing.Size(116, 142);
             this.groupBoxAdd.TabIndex = 11;
             this.groupBoxAdd.TabStop = false;
@@ -179,7 +181,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtExtraSubtotal);
             this.Controls.Add(this.txtExtraOrder);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmExtras";
             this.Text = "Extras";
             this.Load += new System.EventHandler(this.frmExtras_Load);

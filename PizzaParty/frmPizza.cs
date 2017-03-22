@@ -109,7 +109,7 @@ namespace PizzaParty
                         result.Add("\t" + topping);
                     }
                 }
-                    lblOrderView.Text = string.Join("\n",result);
+                    lblOrderView.Text = "Pizza Order:\n" + string.Join("\n",result);
             }
             catch (ArgumentNullException)
             {
