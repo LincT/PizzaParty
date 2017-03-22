@@ -12,6 +12,7 @@ namespace PizzaParty
 {
     public partial class frmDrinks : Form
     {
+      
         public frmDrinks()
         {
             InitializeComponent();
@@ -32,13 +33,20 @@ namespace PizzaParty
             string drinkSize = this.cboSize.GetItemText(this.cboSize.SelectedItem);
             string drinkType = this.cboType.GetItemText(this.cboType.SelectedItem);
             string drinkSelected = "Drink: ";
-
-            drinkSelected += string.Join(",", drinkSize.Split('-')[0] +","+ drinkType+"," + 
+            if (cboType.SelectedIndex !=0 && cboSize.SelectedIndex!=0)
+            {
+                drinkSelected += string.Join(",", drinkSize.Split('-')[0] +","+ drinkType+"," + 
                 drinkSize.Split('-')[1]);
+                this.Tag = drinkSelected;
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("Please select both a size and type");
+            }
 
             //Result to show on txtRunningTotal on Main Form
-            this.Tag = drinkSelected;
-            this.DialogResult = DialogResult.OK;
+            
         }
     }
 }

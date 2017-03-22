@@ -196,7 +196,6 @@ namespace PizzaParty
             this.Close();
         }
 
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             List<string> pizza = new List<string>();

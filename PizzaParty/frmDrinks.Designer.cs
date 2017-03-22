@@ -65,7 +65,7 @@
             "20 oz - $2",
             "2 Liter - $3"});
             this.cboSize.Location = new System.Drawing.Point(21, 51);
-            this.cboSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboSize.Margin = new System.Windows.Forms.Padding(2);
             this.cboSize.Name = "cboSize";
             this.cboSize.Size = new System.Drawing.Size(92, 21);
             this.cboSize.TabIndex = 1;
@@ -80,9 +80,11 @@
             "Sprite",
             "Sprite Zero",
             "Orange Fanta",
-            "A&W Root Beer"});
+            "A&W Root Beer",
+            "Lemonade",
+            "Iced Tea"});
             this.cboType.Location = new System.Drawing.Point(133, 51);
-            this.cboType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboType.Margin = new System.Windows.Forms.Padding(2);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(92, 21);
             this.cboType.TabIndex = 2;
@@ -90,7 +92,7 @@
             // btnAddDrinks
             // 
             this.btnAddDrinks.Location = new System.Drawing.Point(41, 106);
-            this.btnAddDrinks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddDrinks.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddDrinks.Name = "btnAddDrinks";
             this.btnAddDrinks.Size = new System.Drawing.Size(56, 19);
             this.btnAddDrinks.TabIndex = 3;
@@ -101,7 +103,7 @@
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(143, 106);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(56, 19);
             this.btnBack.TabIndex = 6;
@@ -120,7 +122,7 @@
             this.Controls.Add(this.cboSize);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDrinks";
             this.Text = "Drinks";
             this.ResumeLayout(false);
